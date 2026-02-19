@@ -1,0 +1,61 @@
+{
+    "version": "1.0.0",
+    "extensions": [
+        {
+            "id": "autocompletado",
+            "name": "Autocompletado",
+            "version": "1.0.0",
+            "description": "Sugerencias inteligentes de código mientras escribes",
+            "author": "DEX STUDIO",
+            "icon": "wand-2",
+            "category": "editor",
+            "color": "#f093fb",
+            "downloads": 0,
+            "has_wordlists": true
+        },
+        {
+            "id": "image-viewer",
+            "name": "Visor de Imágenes",
+            "version": "1.0.0",
+            "description": "Visualiza imágenes directamente en el editor",
+            "author": "DEX STUDIO",
+            "icon": "image",
+            "category": "editor",
+            "color": "#4facfe",
+            "downloads": 0
+        },
+        {
+            "id": "html-preview",
+            "name": "Preview HTML",
+            "version": "1.0.0",
+            "description": "Previsualiza archivos HTML en una pestaña del editor",
+            "author": "DEX STUDIO",
+            "icon": "eye",
+            "category": "editor",
+            "color": "#43e97b",
+            "downloads": 0
+        },
+        {
+            "id": "monokai-theme",
+            "name": "Monokai Theme",
+            "version": "1.0.0",
+            "description": "Tema Monokai clásico para el editor de código",
+            "author": "DEX STUDIO",
+            "icon": "palette",
+            "category": "theme",
+            "color": "#f92672",
+            "downloads": 0
+        },
+        {
+            "id": "file-icons",
+            "name": "File Icons",
+            "version": "1.0.0",
+            "description": "Iconos coloridos por tipo de archivo en el explorador",
+            "author": "DEX STUDIO",
+            "icon": "file-type",
+            "category": "ui",
+            "color": "#ffd60a",
+            "downloads": 0
+        }
+    ]
+}

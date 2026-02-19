@@ -1,0 +1,12 @@
+{
+    "id": "image-viewer",
+    "name": "Visor de Imágenes",
+    "version": "1.0.0",
+    "description": "Visualiza imágenes directamente en el editor",
+    "author": "DEX STUDIO",
+    "icon": "image",
+    "category": "editor",
+    "min_dex_version": "1.0.0",
+    "files": ["main.js"],
+    "color": "#4facfe"
+}

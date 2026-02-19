@@ -1,0 +1,12 @@
+{
+    "id": "monokai-theme",
+    "name": "Monokai Theme",
+    "version": "1.0.0",
+    "description": "Tema Monokai clásico para el editor de código",
+    "author": "DEX STUDIO",
+    "icon": "palette",
+    "category": "theme",
+    "min_dex_version": "1.0.0",
+    "files": ["main.js"],
+    "color": "#f92672"
+}

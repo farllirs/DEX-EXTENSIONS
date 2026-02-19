@@ -1,0 +1,12 @@
+{
+    "id": "autocompletado",
+    "name": "Autocompletado",
+    "version": "1.0.0",
+    "description": "Sugerencias inteligentes de código mientras escribes",
+    "author": "DEX STUDIO",
+    "icon": "wand-2",
+    "category": "editor",
+    "min_dex_version": "1.0.0",
+    "files": ["main.js"],
+    "color": "#f093fb"
+}

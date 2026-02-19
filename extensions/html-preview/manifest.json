@@ -1,0 +1,12 @@
+{
+    "id": "html-preview",
+    "name": "Preview HTML",
+    "version": "1.0.0",
+    "description": "Previsualiza archivos HTML en una pestaña del editor",
+    "author": "DEX STUDIO",
+    "icon": "eye",
+    "category": "editor",
+    "min_dex_version": "1.0.0",
+    "files": ["main.js"],
+    "color": "#43e97b"
+}
