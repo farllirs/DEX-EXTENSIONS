@@ -1,10 +1,10 @@
-{
-  "id": "dex-md",
-  "name": "visor de md",
-  "version": "1.0.0",
-  "description": "Previsualiza archivos Markdown con tema dinámico",
-  "icon": "icon.png",
-  "author": "dex",
-  "category": "editor",
-  "color": "linear-gradient(135deg, #667eea, #764ba2)"
+{  
+    "id": "dex-md",  
+    "name": "visor de md",  
+    "version": "1.0.0",  
+    "description": "visor de md",  
+    "author": "dex",  
+    "category": "editor",  
+    "icon": "puzzle",  
+    "color": "linear-gradient(135deg, #667eea, #764ba2)"  
 }
