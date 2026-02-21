@@ -1,0 +1,11 @@
+{
+    "name": "dex md",
+    "identifier": "md-synthesis",
+    "creator": "DEX STUDIO",
+    "version": "1.0.1",
+    "category": "Utility",
+    "license": "MIT",
+    "type": "Extension",
+    "icon": "",
+    "description": "S\u00edntesis visual de todos los elementos Markdown ..."
+}
