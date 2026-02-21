@@ -56,6 +56,16 @@
             "category": "ui",
             "color": "#ffd60a",
             "downloads": 0
-        }
+        },
+        {
+    "id": "md-synthesis",
+    "name": "dex md",
+    "version": "1.0.1",
+    "description": "Síntesis visual de todos los elementos Markdown ...",
+    "author": "DEX STUDIO",
+    "category": "editor",
+    "icon": "palette",
+    "color": "linear-gradient(135deg, #667eea, #764ba2)"
+       }
     ]
 }
