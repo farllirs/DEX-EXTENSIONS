@@ -5,7 +5,7 @@
             "id": "autocompletado",
             "name": "Autocompletado",
             "version": "1.0.0",
-            "description": "Sugerencias inteligentes de código mientras escribes",
+            "description": "Sugerencias inteligentes de c\u00f3digo mientras escribes",
             "author": "DEX STUDIO",
             "icon": "wand-2",
             "category": "editor",
@@ -15,9 +15,9 @@
         },
         {
             "id": "image-viewer",
-            "name": "Visor de Imágenes",
+            "name": "Visor de Im\u00e1genes",
             "version": "1.0.0",
-            "description": "Visualiza imágenes directamente en el editor",
+            "description": "Visualiza im\u00e1genes directamente en el editor",
             "author": "DEX STUDIO",
             "icon": "image",
             "category": "editor",
@@ -28,7 +28,7 @@
             "id": "html-preview",
             "name": "Preview HTML",
             "version": "1.0.0",
-            "description": "Previsualiza archivos HTML en una pestaña del editor",
+            "description": "Previsualiza archivos HTML en una pesta\u00f1a del editor",
             "author": "DEX STUDIO",
             "icon": "eye",
             "category": "editor",
@@ -39,7 +39,7 @@
             "id": "monokai-theme",
             "name": "Monokai Theme",
             "version": "1.0.0",
-            "description": "Tema Monokai clásico para el editor de código",
+            "description": "Tema Monokai cl\u00e1sico para el editor de c\u00f3digo",
             "author": "DEX STUDIO",
             "icon": "palette",
             "category": "theme",
@@ -58,14 +58,15 @@
             "downloads": 0
         },
         {
-    "id": "md-synthesis",
-    "name": "dex md",
-    "version": "1.0.1",
-    "description": "Síntesis visual de todos los elementos Markdown ...",
-    "author": "DEX STUDIO",
-    "category": "editor",
-    "icon": "palette",
-    "color": "linear-gradient(135deg, #667eea, #764ba2)"
-       }
+            "id": "md-synthesis",
+            "name": "dex md",
+            "version": "1.0.1",
+            "description": "S\u00edntesis visual de todos los elementos Markdown ...",
+            "author": "DEX STUDIO",
+            "category": "editor",
+            "icon": "palette",
+            "color": "linear-gradient(135deg, #667eea, #764ba2)",
+            "repo_url": "https://github.com/farllirs/MD-Synthesis"
+        }
     ]
 }
