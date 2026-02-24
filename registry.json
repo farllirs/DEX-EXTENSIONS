@@ -67,6 +67,17 @@
             "icon": "palette",
             "color": "linear-gradient(135deg, #667eea, #764ba2)",
             "repo_url": "https://github.com/farllirs/MD-Synthesis"
+        },
+        {
+            "id": "markdown-pro",
+            "name": "Markdown Pro",
+            "version": "1.0.0",
+            "description": "Editor Markdown avanzado con preview en tiempo real, toolbar de formato, exportar a HTML, tabla de contenidos y soporte completo de sintaxis GFM",
+            "author": "DEX STUDIO",
+            "category": "editor",
+            "icon": "file-text",
+            "color": "linear-gradient(135deg, #0a84ff, #5e5ce6)",
+            "repo_url": "https://github.com/farllirs/dm-test"
         }
     ]
 }
