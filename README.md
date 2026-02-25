@@ -1,19 +1,26 @@
 # DEX STUDIO — Repositorio de Extensiones
 
-Extensiones oficiales y de la comunidad para DEX STUDIO.
+Extensiones oficiales y de la comunidad para DEX STUDIO v1.0.2.
+
+## Novedades v1.0.2
+
+- **Marketplace estilo VS Code** — Pestañas Instaladas/Marketplace, búsqueda global
+- **Activar/Desactivar extensiones** — Toggle rápido sin desinstalar
+- **Detección de estado real** — Verificación contra disco, no solo DB
+- **README renderizado** — Se muestra con formato Markdown en el panel de detalle
 
 ## Estructura de una Extensión
 
 Cada extensión debe contener:
 - `manifest.json` — Configuración y metadata
-- `extension.dex.js` (o `main.js` por compatibilidad) — Código principal (DEBE terminar con `// Dex code successful`)
+- `extension.dex.js` (o `main.js`) — Código principal (DEBE terminar con `// Dex code successful`)
 - `README.md` — Documentación (se muestra en el panel de extensiones)
 
 ## Tipos de Extensiones
 
 | Categoría | Descripción | Ejemplo |
 |-----------|-------------|---------|
-| `editor` | Funcionalidades del editor | Autocompletado, Preview HTML |
+| `editor` | Funcionalidades del editor | Autocompletado, Preview HTML, Markdown Pro |
 | `theme` | Temas de colores | Monokai, One Dark |
 | `ui` | Mejoras visuales | File Icons |
 | `language` | Soporte de lenguajes | Syntax highlighting |
@@ -36,7 +43,6 @@ Cada extensión debe contener:
 ## Plantilla de Extensión
 
 ```javascript
-// Mi Extensión — Extensión para DEX STUDIO
 DEX.registerExtension({
     id: 'mi-extension',
     name: 'Mi Extensión',
@@ -51,19 +57,17 @@ DEX.registerExtension({
         console.log('Mi Extensión inicializada');
     },
     onFileOpen: function(path, ext) {
-        return false; // true si la extensión maneja este archivo
+        return false;
     },
     onEditorInput: function(editor) {
-        // Se ejecuta al escribir en el editor
     },
     onAction: function() {
-        // Acción del botón
     }
 });
 // Dex code successful
 ```
 
-## DEX Extension API (v1.0.1)
+## DEX Extension API (v1.0.2)
 
 ### Paneles
 ```javascript
@@ -84,8 +88,6 @@ DEX.getProjectPath()                 // Ruta del proyecto actual
 ```javascript
 DEX.onFileSave(callback)             // Al guardar archivo
 DEX.onFileChange(callback)           // Al cambiar de archivo
-DEX.triggerFileSave(path)            // Disparar hooks de guardado
-DEX.triggerFileChange(path)          // Disparar hooks de cambio
 ```
 
 ### Comandos
@@ -101,21 +103,35 @@ DEX.showInputDialog(opts)            // Diálogo de input (Promise)
 DEX.showNotification(title, msg, type) // Notificación
 DEX.log(msg, isError)                // Escribir en terminal
 DEX.getTheme()                       // Obtener tema {ui, editor}
-```
-
-### Utilidades
-```javascript
 DEX.parseMarkdown(md)                // Parser de Markdown integrado
 ```
 
-## Instalar Extensiones
+### Multi-archivo (v2)
+```javascript
+DEX.require(extId, 'utils.js')        // Cargar módulos JS/JSON
+DEX.python.run(extId, 'script.py')    // Ejecutar Python
+DEX.extFiles.list(extId)              // Listar archivos de la extensión
+DEX.extFiles.read(extId, path)        // Leer archivo
+DEX.extFiles.write(extId, path, data) // Escribir archivo
+```
 
-Las extensiones se descargan desde el panel de **Extensiones** dentro de DEX STUDIO, o se publican directamente desde el editor con el botón **Publicar** en el menú Compilar.
+### Filesystem y Otros
+```javascript
+DEX.fs.readFile(path) / DEX.fs.writeFile(path, content)
+DEX.fs.listDir(path) / DEX.fs.createFile(path) / DEX.fs.createDir(path)
+DEX.fs.delete(path) / DEX.fs.rename(old, new) / DEX.fs.exists(path)
+DEX.shell.exec(cmd)
+DEX.storage.forExtension(id).get(key) / .set(key, value)
+```
 
-## Publicar una Extensión
+## Gestión de Extensiones
 
-1. Crea un proyecto de tipo **Extensión** en DEX STUDIO
-2. Desarrolla tu extensión usando la API de arriba
-3. Ve a **Compilar → 📤 Publicar Extensión**
-4. Necesitarás un token de GitHub con permisos `repo`
-5. Tu extensión aparecerá en el marketplace automáticamente
+- **Instalar** — Desde el panel Marketplace dentro de DEX STUDIO
+- **Activar/Desactivar** — Botón ⏸/▶ sin eliminar archivos (requiere reinicio)
+- **Desinstalar** — Botón 🗑 elimina archivos y registro de la DB
+- **Publicar** — Compilar → 📤 Publicar Extensión (necesita token GitHub con scope `repo`)
+
+## Repositorios
+
+- **Editor:** https://github.com/farllirs/DEX-STUDIO
+- **Extensiones:** https://github.com/farllirs/DEX-EXTENSIONS
