@@ -1,0 +1,31 @@
+{
+    "_comment_id": "Unique identifier for your extension (lowercase, hyphens). Must match the folder name.",
+    "id": "{{IDENTIFIER}}",
+
+    "_comment_name": "Display name shown in the Marketplace and extension manager.",
+    "name": "{{APP_NAME}}",
+
+    "_comment_version": "Semantic version (major.minor.patch). Bump patch on updates.",
+    "version": "{{VERSION}}",
+
+    "_comment_description": "Short description (1-2 sentences) shown in the Marketplace listing.",
+    "description": "{{DESCRIPTION}}",
+
+    "_comment_author": "Your name or organization. Shown in extension details.",
+    "author": "{{CREATOR}}",
+
+    "_comment_category": "Category for filtering. Options: editor, tools, language, theme, ui-theme, productivity, debug.",
+    "category": "editor",
+
+    "_comment_icon": "Lucide icon name (e.g. puzzle, palette, layout, zap, code, settings).",
+    "icon": "puzzle",
+
+    "_comment_color": "CSS gradient or color for the extension card in the Marketplace.",
+    "color": "linear-gradient(135deg, #667eea, #764ba2)",
+
+    "_comment_type": "Optional. Set to 'ui-theme' for full UI theme extensions (changes entire interface look).",
+
+    "_comment_colors": "Optional. Preview color palette for theme extensions. Example: { 'background': '#1e1e2e', 'foreground': '#cdd6f4', 'accent': '#89b4fa' }",
+
+    "_comment_files": "Optional array of extra files to include when publishing. Example: ['styles/custom.css', 'data/config.json']"
+}
