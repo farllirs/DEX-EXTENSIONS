@@ -36,6 +36,7 @@ Repositorio oficial de extensiones para DEX STUDIO.
 
 ## Novedades de compatibilidad
 
+- Compatibilidad objetivo de documentación/repo: `DEX STUDIO v1.0.3`.
 - Nueva UI API para extensiones en el editor:
   - `DEX.ui.overrideButton(id, config)`
   - `DEX.ui.clearButton(id)`
