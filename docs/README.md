@@ -22,5 +22,5 @@ Guías y plantillas para crear extensiones para DEX STUDIO.
 ## Recursos
 
 - [Repositorio del Editor](https://github.com/farllirs/DEX-STUDIO)
-- [Repositorio de Extensiones](https://github.com/farllirs/dex-extensions)
+- [Repositorio de Extensiones](https://github.com/farllirs/DEX-EXTENSIONS)
 - [Íconos Lucide](https://lucide.dev/icons) — Catálogo de íconos disponibles

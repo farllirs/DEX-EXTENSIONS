@@ -34,7 +34,20 @@ Repositorio oficial de extensiones para DEX STUDIO.
 - Guía: [docs/GUIA-EXTENSIONES.md](./docs/GUIA-EXTENSIONES.md)
 - SDK: [docs/SDK-REFERENCE.md](./docs/SDK-REFERENCE.md)
 
+## Novedades de compatibilidad
+
+- Nueva UI API para extensiones en el editor:
+  - `DEX.ui.overrideButton(id, config)`
+  - `DEX.ui.clearButton(id)`
+  - `DEX.ui.listButtons()`
+- IDs core soportados para override:
+  - `run`
+  - `compile`
+  - `terminal`
+  - `console-toggle`
+- El Marketplace ahora puede marcar extensiones como `Extensión no disponible` cuando el repositorio deja de responder y ocultarlas tras un periodo de gracia.
+
 ## Repositorios
 
 - Editor: https://github.com/farllirs/DEX-STUDIO
-- Extensiones: https://github.com/farllirs/dex-extensions
+- Extensiones: https://github.com/farllirs/DEX-EXTENSIONS

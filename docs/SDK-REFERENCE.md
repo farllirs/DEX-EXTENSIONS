@@ -56,6 +56,30 @@ ui_panels: [
 ]
 ```
 
+### Override de botones core (UI API)
+
+```javascript
+DEX.ui.overrideButton('terminal', {
+    label: 'Nueva Terminal',
+    icon: 'terminal-square',
+    title: 'Abrir terminal extendida',
+    action: function() {
+        app.createTerminal();
+        app.toggleConsole(true);
+    }
+});
+
+DEX.ui.clearButton('terminal');
+const buttons = DEX.ui.listButtons();
+```
+
+IDs de botones core disponibles:
+
+- `run`
+- `compile`
+- `terminal`
+- `console-toggle`
+
 ---
 
 ## Handlers (Ciclo de Vida)

@@ -76,6 +76,38 @@ ui_buttons: [
 ]
 ```
 
+### UI API para botones core del editor
+
+Además de `ui_buttons`, puedes modificar botones nativos del editor mediante `DEX.ui`:
+
+```javascript
+DEX.ui.overrideButton('terminal', {
+    label: 'Nueva Terminal',
+    icon: 'terminal-square',
+    title: 'Abrir terminal extendida',
+    action: function() {
+        app.createTerminal();
+        app.toggleConsole(true);
+    }
+});
+```
+
+Funciones:
+
+- `DEX.ui.overrideButton(id, config)`
+- `DEX.ui.clearButton(id)`
+- `DEX.ui.listButtons()`
+
+IDs core actuales:
+
+- `run`
+- `compile`
+- `terminal`
+- `console-toggle`
+
+> `DEX.ui.*` está separado del sistema `ui-theme`.
+> Usa `ui-theme` para layout/estilo global y `DEX.ui.*` para comportamiento de botones.
+
 #### Items en Barra de Estado
 ```javascript
 ui_statusbar: [
@@ -207,3 +239,15 @@ DEX.registerExtension({
 2. Desde DEX STUDIO, usa la opción "Publicar Extensión" con tu token de GitHub
 3. La extensión se registra automáticamente en el Marketplace
 4. Los usuarios pueden instalarla buscando en el Marketplace integrado
+
+## Disponibilidad en Marketplace
+
+Si el repositorio de una extensión deja de existir o responde con error, DEX STUDIO puede marcarla como no disponible durante la sincronización:
+
+- Estado: `Extensión no disponible`
+- Comportamiento: ocultado automático tras periodo de gracia
+
+Recomendado para autores:
+
+- Mantener repositorio público y activo.
+- Mantener rutas válidas de `manifest.json`, `extension.dex.js`/`main.js` y `theme.css` cuando aplique.
