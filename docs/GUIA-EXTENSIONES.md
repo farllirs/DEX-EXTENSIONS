@@ -1,5 +1,13 @@
 # Guía para Crear Extensiones — DEX STUDIO
 
+## Compatibilidad de temas
+
+| Tipo funcional | `category` | `type` | Estado | Dónde se aplica |
+|---|---|---|---|---|
+| Tema normal (colores/estilo) | `theme` | vacío u opcional | Estable | Configuración > Apariencia > Tema Normal |
+| UI Layout (estructura/disposición) | `ui-theme` | `ui-theme` recomendado | Beta | Configuración > UI Layout (Beta) |
+| Compatibilidad legacy UI Layout | `theme` | `ui-theme` | Compatibilidad | Se trata como UI Layout |
+
 ## Estructura de una Extensión
 ```
 mi-extension/
@@ -117,9 +125,9 @@ onEditorInput: function(editor) {
 
 ---
 
-## Crear una Extensión de Tema (UI Theme)
+## Crear una Extensión de Tema Normal (`theme`)
 
-Las extensiones de tema cambian la apariencia completa de la interfaz, no solo los colores del editor.
+Las extensiones de tipo `theme` cambian colores y estilo visual general.
 
 ### 1. Configurar manifest.json
 ```json
@@ -130,7 +138,6 @@ Las extensiones de tema cambian la apariencia completa de la interfaz, no solo l
     "description": "Un tema oscuro personalizado para DEX STUDIO",
     "author": "Tu Nombre",
     "category": "theme",
-    "type": "ui-theme",
     "icon": "palette",
     "color": "linear-gradient(135deg, #1e1e2e, #313244)",
     "colors": {
@@ -143,9 +150,9 @@ Las extensiones de tema cambian la apariencia completa de la interfaz, no solo l
 }
 ```
 
-### 2. Crear theme.css
+### 2. Crear `theme.css`
 ```css
-/* theme.css — Variables CSS que DEX STUDIO aplica a toda la interfaz */
+/* theme.css — Variables CSS que DEX STUDIO aplica a la interfaz */
 :root {
     --bg-primary: #1e1e2e;
     --bg-secondary: #313244;
@@ -164,8 +171,8 @@ Las extensiones de tema cambian la apariencia completa de la interfaz, no solo l
 }
 ```
 
-### 3. El archivo extension.dex.js es opcional para temas puros
-Si tu tema solo aplica CSS, puedes crear un extension.dex.js mínimo:
+### 3. El archivo `extension.dex.js` es opcional para temas puros
+Si el tema solo aplica CSS, puedes usar un `extension.dex.js` mínimo:
 ```javascript
 DEX.registerExtension({
     id: 'mi-tema-oscuro',
@@ -191,7 +198,7 @@ DEX.registerExtension({
 | Botón no aparece | `action` no coincide con nombre del handler | Verificar que el string en `action` es idéntico al nombre de la función |
 | `id` no reconocido | `id` en manifest ≠ `id` en registerExtension | Usar el mismo identificador en ambos archivos |
 | Editor se congela | Código pesado en `onEditorInput` | Usar debounce o limitar la frecuencia de ejecución |
-| Tema no se aplica | Falta `theme.css` o `category` no es `"theme"` | Crear `theme.css` y usar `"category": "theme"` en manifest |
+| Tema no se aplica | Falta `theme.css` o categoría incorrecta | Para tema normal usar `category: "theme"`; para layout usar `category: "ui-theme"` |
 
 ---
 

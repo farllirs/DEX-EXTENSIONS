@@ -201,13 +201,32 @@ const val = store.get('config');
 
 ---
 
-## Temas de Interfaz (UI Themes)
+## Compatibilidad de Temas
 
-Para crear un tema completo, configura `manifest.json` con:
+| Tipo funcional | `category` | `type` | Estado | Dónde se aplica |
+|---|---|---|---|---|
+| Tema normal (colores/estilo) | `theme` | vacío u opcional | Estable | Configuración > Apariencia > Tema Normal |
+| UI Layout (estructura/disposición) | `ui-theme` | `ui-theme` recomendado | Beta | Configuración > UI Layout (Beta) |
+| Compatibilidad legacy UI Layout | `theme` | `ui-theme` | Compatibilidad | Se trata como UI Layout |
+
+### Manifest para tema normal
 
 ```json
 {
     "category": "theme",
+    "colors": {
+        "background": "#1e1e2e",
+        "foreground": "#cdd6f4",
+        "accent": "#89b4fa"
+    }
+}
+```
+
+### Manifest para UI Layout (beta)
+
+```json
+{
+    "category": "ui-theme",
     "type": "ui-theme",
     "colors": {
         "background": "#1e1e2e",
